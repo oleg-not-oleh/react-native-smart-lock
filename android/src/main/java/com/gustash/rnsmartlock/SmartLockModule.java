@@ -45,7 +45,7 @@ public class SmartLockModule extends ReactContextBaseJavaModule {
     SmartLockModule(ReactApplicationContext reactContext) {
         super(reactContext);
 
-        CredentialsOptions options = new CredentialsOptions.Builder().build();
+        CredentialsOptions options = new CredentialsOptions.Builder().forceEnableSaveDialog().build();
 
         this.mCredentialsClient = Credentials.getClient(reactContext, options);
         this.mReactContext = reactContext;
